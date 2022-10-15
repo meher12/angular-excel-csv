@@ -1,27 +1,50 @@
-# AngularExcelCsv
+# Import Export Excel & CSV In Angular
+## Install these packages
+```
+npm i xlsx
+npm install --save @fortawesome/fontawesome-free
+npm i bootstrap@4.6 --save
+```
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+xlsx package provides a bunch of functions for reading and writing CSV/Excel files.
 
-## Development server
+Parsing functions:-
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+      XLSX.read(data, read_opts) attempts to parse data
 
-## Code scaffolding
+      XLSX.readFile(filename, read_opts) attempts to read filename and parse.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Note:- you can pass raw option to false if you want formatted data. (example - formatted date)
 
-## Build
+XLSX.read(data, { raw: false })
+XLSX.readFile(filename, { raw: false })
+JavaScript
+Writing functions:-
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+      XLSX.write(wb, write_opts) attempts to write the workbook
 
-## Running unit tests
+      XLSX.writeFile(wb, filename, write_opts) attempts to write workbook
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Utility Functions:-
 
-## Running end-to-end tests
+      Constructing:-
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+            book_new creates an empty workbook
 
-## Further help
+            book_append_sheet adds a worksheet to a workbook
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+       Importing:
+
+           aoa_to_sheet converts an array of arrays of JS data to a worksheet
+
+           json_to_sheet converts an array of JS objects to a worksheet
+
+          sheet_add_aoa adds an array of arrays of JS data to an existing worksheet.
+
+          sheet_add_json adds an array of JS objects to an existing worksheet.
+
+    Exporting:
+
+          sheet_to_json converts a worksheet object to an array of JSON objects.
+
+          sheet_to_csv generates delimiter-separated-values output.
