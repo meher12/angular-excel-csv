@@ -48,3 +48,7 @@ Utility Functions:-
           sheet_to_json converts a worksheet object to an array of JSON objects.
 
           sheet_to_csv generates delimiter-separated-values output.
+
+You can change the extension based on the file you want to import or export. (.xlsx, .xls, .csv)
+
+For test you ca use csv and xlsx files inside folder sample files 
