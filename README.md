@@ -51,4 +51,4 @@ Utility Functions:-
 
 You can change the extension based on the file you want to import or export. (.xlsx, .xls, .csv)
 
-For test you ca use csv and xlsx files inside folder sample files 
+For test you can use csv and xlsx files inside folder sample files 
